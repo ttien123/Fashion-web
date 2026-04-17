@@ -188,7 +188,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─────────── HERO ─────────── */}
-      <section className="relative flex w-full flex-col items-center overflow-hidden md:min-h-[760px] md:flex-row">
+      <section className="relative flex w-full flex-col items-center overflow-hidden lg:min-h-[760px] lg:flex-row">
         {/* Airy teen background — subtle, refined */}
         <div
           aria-hidden
@@ -202,18 +202,18 @@ export default function HomePage() {
         {/* Soft blobs — only two, low saturation */}
         <div
           aria-hidden
-          className="animate-float-soft pointer-events-none absolute top-20 left-[6%] z-0 hidden size-72 rounded-full bg-[oklch(0.92_0.09_350/0.45)] blur-3xl md:block"
+          className="animate-float-soft pointer-events-none absolute top-20 left-[6%] z-0 hidden size-72 rounded-full bg-[oklch(0.92_0.09_350/0.45)] blur-3xl lg:block"
         />
         <div
           aria-hidden
-          className="animate-drift-alt pointer-events-none absolute right-[8%] bottom-[10%] z-0 hidden size-64 rounded-full bg-[oklch(0.94_0.08_55/0.45)] blur-3xl md:block"
+          className="animate-drift-alt pointer-events-none absolute right-[8%] bottom-[10%] z-0 hidden size-64 rounded-full bg-[oklch(0.94_0.08_55/0.45)] blur-3xl lg:block"
           style={{ animationDelay: "-3s" }}
         />
 
         {/* Minimal scattered accents */}
         <Sparkles
           aria-hidden
-          className="animate-float-soft absolute top-[14%] left-[32%] z-0 hidden size-7 fill-[oklch(0.9_0.1_305/0.7)] stroke-[oklch(0.6_0.18_305)] md:block"
+          className="animate-float-soft absolute top-[14%] left-[32%] z-0 hidden size-7 fill-[oklch(0.9_0.1_305/0.7)] stroke-[oklch(0.6_0.18_305)] lg:block"
           style={
             {
               ["--spin" as string]: "-10deg",
@@ -223,11 +223,11 @@ export default function HomePage() {
         />
         <div
           aria-hidden
-          className="animate-twinkle absolute top-[58%] left-[22%] z-0 hidden size-2.5 rounded-full bg-[oklch(0.75_0.2_350)] md:block"
+          className="animate-twinkle absolute top-[58%] left-[22%] z-0 hidden size-2.5 rounded-full bg-[oklch(0.75_0.2_350)] lg:block"
           style={{ animationDelay: "0.8s" }}
         />
 
-        <div className="relative z-10 flex w-full flex-col justify-center gap-7 px-8 py-16 md:w-1/2 md:px-14">
+        <div className="relative z-10 flex w-full flex-col justify-center gap-7 px-8 py-16 lg:w-1/2 lg:px-14">
           {/* small badge */}
           <div className="inline-flex w-fit items-center gap-2 rounded-full border-2 border-[oklch(0.85_0.15_350)] bg-white/80 px-4 py-1.5 text-xs font-bold tracking-widest text-[oklch(0.5_0.2_340)] uppercase shadow-sm backdrop-blur">
             <span className="animate-twinkle size-2 rounded-full bg-[oklch(0.68_0.24_355)]" />
@@ -235,7 +235,7 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-5">
-            <h1 className="font-headline text-5xl leading-[1.05] font-bold text-[oklch(0.32_0.14_340)] md:text-[5.5rem]">
+            <h1 className="font-headline text-5xl leading-[1.05] font-bold text-[oklch(0.32_0.14_340)] lg:text-[5.5rem]">
               Tủ đồ{" "}
               <span className="relative inline-block font-script text-[oklch(0.68_0.24_355)]">
                 xoay vòng
@@ -270,7 +270,7 @@ export default function HomePage() {
 
           <div className="mt-2 flex flex-wrap gap-3">
             {/* PRIMARY — Thuê ngay */}
-            <Button className="group/btn relative h-auto cursor-pointer overflow-hidden rounded-full border-0 bg-[linear-gradient(110deg,oklch(0.68_0.24_355)_0%,oklch(0.74_0.21_335)_30%,oklch(0.76_0.18_305)_55%,oklch(0.74_0.21_335)_75%,oklch(0.68_0.24_355)_100%)] bg-[length:220%_100%] bg-left px-6 py-3 text-[15px] font-bold text-white shadow-[0_8px_22px_-10px_oklch(0.68_0.24_355/0.6),0_2px_6px_-2px_oklch(0.68_0.24_355/0.35)] ring-0 transition-[background-position,box-shadow,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-right hover:shadow-[0_14px_30px_-12px_oklch(0.68_0.24_355/0.75),0_4px_10px_-2px_oklch(0.68_0.24_355/0.4)] focus-visible:ring-4 focus-visible:ring-[oklch(0.85_0.15_350/0.5)] focus-visible:outline-none active:translate-y-0">
+            <Button className="group/btn relative h-auto w-full cursor-pointer overflow-hidden rounded-full border-0 bg-[linear-gradient(110deg,oklch(0.68_0.24_355)_0%,oklch(0.74_0.21_335)_30%,oklch(0.76_0.18_305)_55%,oklch(0.74_0.21_335)_75%,oklch(0.68_0.24_355)_100%)] bg-[length:220%_100%] bg-left px-6 py-3 text-[15px] font-bold text-white shadow-[0_8px_22px_-10px_oklch(0.68_0.24_355/0.6),0_2px_6px_-2px_oklch(0.68_0.24_355/0.35)] ring-0 transition-[background-position,box-shadow,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-right hover:shadow-[0_14px_30px_-12px_oklch(0.68_0.24_355/0.75),0_4px_10px_-2px_oklch(0.68_0.24_355/0.4)] focus-visible:ring-4 focus-visible:ring-[oklch(0.85_0.15_350/0.5)] focus-visible:outline-none active:translate-y-0 lg:w-auto">
               <span
                 aria-hidden
                 className="pointer-events-none absolute top-0 bottom-0 -left-[20%] z-0 w-[15%] -skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent opacity-0 transition-[transform,opacity] duration-[900ms] ease-out group-hover/btn:translate-x-[700%] group-hover/btn:opacity-100"
@@ -285,7 +285,7 @@ export default function HomePage() {
             {/* SECONDARY — Đăng đồ cho thuê */}
             <Button
               variant="outline"
-              className="group/btn2 relative h-auto cursor-pointer overflow-hidden rounded-full border-[1.5px] border-[oklch(0.5_0.18_340)] bg-white/75 px-6 py-3 text-[15px] font-semibold shadow-[0_3px_10px_-4px_oklch(0.36_0.13_340/0.2)] backdrop-blur-md transition-[transform,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-[oklch(0.3_0.16_340)] hover:bg-white/75 hover:shadow-[0_10px_24px_-8px_oklch(0.4_0.2_340/0.4)] focus-visible:ring-4 focus-visible:ring-[oklch(0.5_0.18_340/0.3)] focus-visible:outline-none active:translate-y-0"
+              className="group/btn2 relative h-auto w-full cursor-pointer overflow-hidden rounded-full border-[1.5px] border-[oklch(0.5_0.18_340)] bg-white/75 px-6 py-3 text-[15px] font-semibold shadow-[0_3px_10px_-4px_oklch(0.36_0.13_340/0.2)] backdrop-blur-md transition-[transform,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-[oklch(0.3_0.16_340)] hover:bg-white/75 hover:shadow-[0_10px_24px_-8px_oklch(0.4_0.2_340/0.4)] focus-visible:ring-4 focus-visible:ring-[oklch(0.5_0.18_340/0.3)] focus-visible:outline-none active:translate-y-0 lg:w-auto"
             >
               <span
                 aria-hidden
@@ -328,7 +328,7 @@ export default function HomePage() {
         </div>
 
         {/* RIGHT — collage of polaroids */}
-        <div className="relative flex h-[560px] w-full items-center justify-center overflow-hidden p-8 md:h-[740px] md:w-1/2">
+        <div className="relative flex h-[560px] w-full items-center justify-center overflow-hidden p-8 lg:h-[740px] lg:w-1/2">
           <div
             aria-hidden
             className="animate-blob absolute top-10 right-10 size-96 bg-gradient-to-br from-[oklch(0.86_0.15_350)] via-[oklch(0.85_0.14_305)] to-[oklch(0.88_0.1_165)] opacity-70 blur-2xl"
@@ -418,7 +418,7 @@ export default function HomePage() {
           <span className="inline-flex items-center gap-2 rounded-full bg-[oklch(0.92_0.12_165)] px-4 py-1 text-xs font-bold tracking-widest text-[oklch(0.4_0.14_170)] uppercase">
             ✦ quy trình ✦
           </span>
-          <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] md:text-6xl">
+          <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] lg:text-6xl">
             Cách StyleLoop{" "}
             <span className="font-script text-[oklch(0.68_0.24_355)]">
               hoạt động
@@ -429,11 +429,11 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="relative grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-4">
           {/* dashed connector */}
           <div
             aria-hidden
-            className="absolute top-14 right-[12%] left-[12%] hidden h-0.5 bg-[radial-gradient(circle,oklch(0.85_0.15_350)_1px,transparent_1.5px)] [background-size:12px_2px] md:block"
+            className="absolute top-14 right-[12%] left-[12%] hidden h-0.5 bg-[radial-gradient(circle,oklch(0.85_0.15_350)_1px,transparent_1.5px)] [background-size:12px_2px] lg:block"
           />
           {STEPS.map((step) => (
             <StepCard key={step.index} {...step} />
@@ -476,12 +476,12 @@ export default function HomePage() {
           className="animate-drift-alt absolute right-[8%] -bottom-20 size-72 rounded-full bg-[oklch(0.94_0.07_55/0.35)] blur-3xl"
           style={{ animationDelay: "-4s" }}
         />
-        <div className="relative mx-auto mb-10 flex max-w-7xl flex-col items-start justify-between gap-4 px-6 md:flex-row md:items-end">
+        <div className="relative mx-auto mb-10 flex max-w-7xl flex-col items-start justify-between gap-4 px-6 lg:flex-row lg:items-end">
           <div className="space-y-2">
             <p className="font-script text-3xl text-[oklch(0.62_0.22_350)]">
               oh so trendy
             </p>
-            <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] md:text-5xl">
+            <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] lg:text-5xl">
               Danh mục đang{" "}
               <span className="relative inline-block">
                 <span className="relative z-10">&ldquo;Hot&rdquo;</span>
@@ -531,21 +531,21 @@ export default function HomePage() {
         />
         <Heart
           aria-hidden
-          className="animate-float-soft absolute top-14 right-[45%] hidden size-6 fill-[oklch(0.72_0.22_350)] stroke-white md:block"
+          className="animate-float-soft absolute top-14 right-[45%] hidden size-6 fill-[oklch(0.72_0.22_350)] stroke-white lg:block"
           style={{ ["--spin" as string]: "-10deg" } as React.CSSProperties}
         />
-        <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-14 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <p className="mb-2 font-script text-3xl text-[oklch(0.6_0.22_355)]">
               this week&apos;s obsession
             </p>
-            <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] md:text-6xl">
+            <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] lg:text-6xl">
               Đồ hot tuần này{" "}
               <span className="animate-wiggle inline-block">✨</span>
             </h2>
           </div>
           <div className="flex items-center gap-3">
-            <div className="hidden items-center gap-2 rounded-full bg-[oklch(0.92_0.12_165)] px-4 py-2 text-xs font-bold text-[oklch(0.35_0.14_170)] md:flex">
+            <div className="hidden items-center gap-2 rounded-full bg-[oklch(0.92_0.12_165)] px-4 py-2 text-xs font-bold text-[oklch(0.35_0.14_170)] lg:flex">
               <span className="animate-twinkle size-2 rounded-full bg-[oklch(0.55_0.18_170)]" />
               cập nhật mỗi thứ hai
             </div>
@@ -566,7 +566,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {PRODUCTS.map((product) => (
             <ProductCard key={product.title} {...product} />
           ))}
@@ -590,13 +590,13 @@ export default function HomePage() {
             <p className="font-script text-3xl text-[oklch(0.6_0.22_355)]">
               why us?
             </p>
-            <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] md:text-5xl">
+            <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] lg:text-5xl">
               3 lý do bạn sẽ{" "}
               <span className="text-[oklch(0.68_0.24_355)]">phải lòng</span>{" "}
               StyleLoop
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div className="group relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[oklch(0.95_0.08_350)] to-[oklch(0.9_0.14_350)] p-8 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-pink-300/40">
               <div
                 aria-hidden
@@ -616,7 +616,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="group relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[oklch(0.95_0.08_165)] to-[oklch(0.9_0.12_165)] p-8 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-300/40 md:-translate-y-4">
+            <div className="group relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[oklch(0.95_0.08_165)] to-[oklch(0.9_0.12_165)] p-8 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-300/40 lg:-translate-y-4">
               <div
                 aria-hidden
                 className="absolute -top-10 -right-10 size-40 rounded-full bg-white/40 blur-2xl"
@@ -668,12 +668,12 @@ export default function HomePage() {
           <p className="font-script text-3xl text-[oklch(0.6_0.22_355)]">
             diary entries
           </p>
-          <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] md:text-5xl">
+          <h2 className="font-headline text-4xl font-bold text-[oklch(0.32_0.14_340)] lg:text-5xl">
             Tiếng vang từ{" "}
             <span className="text-[oklch(0.68_0.24_355)] italic">Closet</span>
           </h2>
         </div>
-        <div className="flex flex-col items-center justify-center gap-12 md:flex-row md:items-start">
+        <div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:items-start">
           {TESTIMONIALS.map((t) => (
             <TestimonialCard key={t.author} {...t} />
           ))}
@@ -681,8 +681,8 @@ export default function HomePage() {
       </section>
 
       {/* ─────────── CTA ─────────── */}
-      <section className="mx-6 mb-24 md:mx-10">
-        <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-[oklch(0.78_0.2_355)] via-[oklch(0.8_0.16_325)] to-[oklch(0.82_0.14_305)] p-10 md:p-16">
+      <section className="mx-6 mb-24 lg:mx-10">
+        <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-[oklch(0.78_0.2_355)] via-[oklch(0.8_0.16_325)] to-[oklch(0.82_0.14_305)] p-10 lg:p-16">
           {/* noise overlay */}
           <div
             aria-hidden
@@ -699,13 +699,13 @@ export default function HomePage() {
             style={{ animationDelay: "-4s" }}
           />
 
-          <div className="relative z-10 grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+          <div className="relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
             <div>
               <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/25 px-4 py-1.5 text-xs font-bold tracking-widest text-white uppercase backdrop-blur-md">
                 <Sparkles className="size-3.5" />
                 Cho thuê · Kiếm thêm
               </div>
-              <h2 className="mb-6 font-headline text-4xl leading-[1.05] font-bold text-white md:text-6xl">
+              <h2 className="mb-6 font-headline text-4xl leading-[1.05] font-bold text-white lg:text-6xl">
                 Tủ đồ của bạn <span className="font-script">đang ngủ</span>?
                 <br />
                 <span className="relative inline-block italic">
@@ -738,7 +738,7 @@ export default function HomePage() {
             </div>
 
             {/* right mini closet card */}
-            <div className="relative hidden h-80 md:block">
+            <div className="relative hidden h-80 lg:block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={"/Home-Img/image-10.png"}
