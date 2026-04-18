@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Camera, Globe, Heart, Sparkles, Users } from "lucide-react"
+import { Camera, Globe, Heart, Mail, Sparkles, Users } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -30,32 +30,73 @@ const FOOTER_COLUMNS: FooterColumn[] = [
 
 export function SiteFooter() {
   return (
-    <footer className="relative mt-20 w-full overflow-hidden rounded-t-[48px] bg-gradient-to-br from-[oklch(0.96_0.05_350)] via-[oklch(0.95_0.06_305)] to-[oklch(0.95_0.07_55)] dark:bg-zinc-950">
+    <footer className="relative mt-20 w-full overflow-hidden bg-[oklch(0.16_0.012_55)] text-[oklch(0.86_0.014_75)]">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-20 left-[20%] size-96 rounded-full bg-[oklch(0.88_0.13_350/0.4)] blur-3xl"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,oklch(0.6_0.062_60/0.6),transparent)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-10 right-[10%] size-80 rounded-full bg-[oklch(0.85_0.14_305/0.4)] blur-3xl"
+        className="pointer-events-none absolute -top-32 left-[20%] size-96 rounded-full bg-[oklch(0.4_0.05_60/0.18)] blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 right-[10%] size-80 rounded-full bg-[oklch(0.6_0.062_60/0.12)] blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-10 py-16 font-body text-sm md:grid-cols-4">
+      {/* Newsletter ribbon */}
+      <div className="relative mx-auto max-w-7xl px-8 pt-14 pb-10 lg:px-12">
+        <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[1fr_auto] lg:gap-10">
+          <div className="space-y-2">
+            <p className="text-[10px] font-semibold tracking-[0.32em] text-[oklch(0.78_0.04_70)] uppercase">
+              ✦ Newsletter ✦
+            </p>
+            <h3 className="font-display text-2xl font-medium tracking-tight text-[oklch(0.97_0.012_78)] lg:text-[28px]">
+              Đăng ký nhận{" "}
+              <span className="italic text-[oklch(0.86_0.034_70)]">
+                ưu đãi sớm nhất
+              </span>{" "}
+              từ StyleLoop.
+            </h3>
+          </div>
+          <form className="flex w-full max-w-md items-center gap-0 overflow-hidden rounded-full bg-[oklch(0.99_0.008_78)] p-1 shadow-[0_18px_40px_-20px_oklch(0_0_0/0.5)] lg:w-[440px]">
+            <div className="flex flex-1 items-center gap-2 px-5">
+              <Mail className="size-4 text-[oklch(0.5_0.024_60)]" />
+              <Input
+                type="email"
+                placeholder="Email của bạn..."
+                className="border-0 bg-transparent p-0 text-[13px] text-[oklch(0.18_0.014_55)] placeholder:text-[oklch(0.55_0.024_60)] shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              />
+            </div>
+            <Button
+              type="submit"
+              className="ribbon-tan rounded-full px-7 py-3 text-[12px] font-semibold tracking-[0.18em] uppercase"
+            >
+              Đăng ký
+            </Button>
+          </form>
+        </div>
+      </div>
+
+      {/* Hairline */}
+      <div className="relative mx-auto max-w-7xl px-8 lg:px-12">
+        <div className="editorial-rule h-px w-full opacity-30" />
+      </div>
+
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-14 font-display text-sm md:grid-cols-4 lg:px-12">
         <div className="space-y-6">
-          <Link
-            href="#"
-            className="flex items-center gap-2"
-          >
-            <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-[oklch(0.7_0.24_355)] to-[oklch(0.75_0.18_305)] font-script text-xl font-black text-white shadow-lg shadow-pink-300/40">
-              S
+          <Link href="#" className="flex items-baseline gap-1.5">
+            <span className="font-display text-2xl font-black uppercase tracking-[0.05em] text-[oklch(0.97_0.012_78)]">
+              Style
             </span>
-            <span className="font-headline text-2xl font-black italic tracking-tight text-[oklch(0.36_0.14_340)]">
-              Style<span className="text-[oklch(0.68_0.24_355)]">Loop</span>
+            <span className="font-display text-2xl font-medium italic tracking-tight text-[oklch(0.78_0.04_70)]">
+              Loop
             </span>
           </Link>
-          <p className="max-w-xs leading-relaxed text-[oklch(0.4_0.05_340)]">
-            Nền tảng thuê đồ thời trang hàng đầu dành cho Gen Z Việt Nam. Xây
-            dựng cộng đồng phong cách bền vững & cùng nhau toả sáng. ✨
+          <p className="max-w-xs leading-relaxed text-[oklch(0.78_0.018_70)]">
+            Editorial wardrobe rental — nơi bạn thuê những thiết kế đáng nhớ
+            cho mọi khoảnh khắc, không cần sở hữu. Chuẩn mẫu mã. An tâm chất
+            lượng.
           </p>
           <div className="flex gap-3">
             {[Globe, Users, Camera].map((Icon, i) => (
@@ -63,9 +104,9 @@ export function SiteFooter() {
                 key={i}
                 href="#"
                 aria-label="Social"
-                className="flex size-11 items-center justify-center rounded-full bg-white text-[oklch(0.6_0.22_355)] shadow-sm shadow-pink-200/50 transition-all hover:scale-110 hover:bg-[oklch(0.68_0.24_355)] hover:text-white"
+                className="flex size-10 items-center justify-center rounded-full border border-[oklch(0.4_0.024_55)] text-[oklch(0.86_0.014_75)] transition-all hover:border-[oklch(0.78_0.04_70)] hover:bg-[oklch(0.6_0.062_60)] hover:text-white"
               >
-                <Icon className="size-5" />
+                <Icon className="size-4" />
               </Link>
             ))}
           </div>
@@ -73,15 +114,15 @@ export function SiteFooter() {
 
         {FOOTER_COLUMNS.map((column) => (
           <div key={column.title} className="flex flex-col gap-4">
-            <h4 className="flex items-center gap-2 text-xs font-bold tracking-widest text-[oklch(0.36_0.14_340)] uppercase">
-              <Sparkles className="size-3 fill-[oklch(0.68_0.24_355)] stroke-[oklch(0.5_0.2_340)]" />
+            <h4 className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.32em] text-[oklch(0.78_0.04_70)] uppercase">
+              <Sparkles className="size-3 fill-[oklch(0.78_0.04_70)] stroke-[oklch(0.78_0.04_70)]" />
               {column.title}
             </h4>
             {column.links.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="w-fit text-[oklch(0.45_0.05_340)] transition-all hover:translate-x-1 hover:text-[oklch(0.55_0.22_355)]"
+                className="w-fit text-[13px] text-[oklch(0.78_0.018_70)] transition-all hover:translate-x-1 hover:text-[oklch(0.97_0.012_78)]"
               >
                 {link.label}
               </Link>
@@ -90,32 +131,37 @@ export function SiteFooter() {
         ))}
 
         <div className="flex flex-col gap-4">
-          <h4 className="flex items-center gap-2 text-xs font-bold tracking-widest text-[oklch(0.36_0.14_340)] uppercase">
-            <Heart className="size-3 fill-[oklch(0.68_0.24_355)] stroke-[oklch(0.5_0.2_340)]" />
-            Newsletter
+          <h4 className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.32em] text-[oklch(0.78_0.04_70)] uppercase">
+            <Heart className="size-3 fill-[oklch(0.78_0.04_70)] stroke-[oklch(0.78_0.04_70)]" />
+            Liên hệ
           </h4>
-          <p className="text-[oklch(0.45_0.05_340)]">
-            Nhận ưu đãi thuê đồ hàng tuần 💌
+          <p className="text-[13px] leading-relaxed text-[oklch(0.78_0.018_70)]">
+            hello@styleloop.vn
+            <br />
+            Quận 1, TP. Hồ Chí Minh
+            <br />
+            Mở cửa: 9:00 — 21:00
           </p>
-          <div className="flex gap-2">
-            <Input
-              type="email"
-              placeholder="Email của bạn..."
-              className="flex-grow rounded-full border-2 border-[oklch(0.9_0.06_340)] bg-white px-4 py-2 text-xs outline-none focus-visible:border-[oklch(0.78_0.18_350)] focus-visible:ring-2 focus-visible:ring-[oklch(0.88_0.15_350/0.3)]"
-            />
-            <Button
-              type="submit"
-              className="rounded-full bg-gradient-to-r from-[oklch(0.68_0.24_355)] to-[oklch(0.74_0.2_335)] px-5 text-xs font-black text-white shadow-md shadow-pink-300/40 transition-all hover:scale-105"
-            >
-              Gửi
-            </Button>
+          <p className="mt-2 text-[11px] italic tracking-wide text-[oklch(0.7_0.024_60)]">
+            “Mặc đẹp mỗi ngày, đổi style liên tục.”
+          </p>
+        </div>
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-8 lg:px-12">
+        <div className="flex flex-col items-center justify-between gap-3 border-t border-[oklch(0.3_0.024_55)] py-6 text-[11px] tracking-[0.18em] text-[oklch(0.62_0.018_60)] uppercase md:flex-row">
+          <p>© 2026 StyleLoop Vietnam — The Editorial Curator</p>
+          <div className="flex gap-5">
+            <Link href="#" className="hover:text-[oklch(0.92_0.014_75)]">
+              Điều khoản
+            </Link>
+            <Link href="#" className="hover:text-[oklch(0.92_0.014_75)]">
+              Bảo mật
+            </Link>
+            <Link href="#" className="hover:text-[oklch(0.92_0.014_75)]">
+              Cookies
+            </Link>
           </div>
-          <p className="mt-4 font-script text-lg text-[oklch(0.55_0.2_340)]">
-            made with ♡ in Saigon
-          </p>
-          <p className="text-xs text-[oklch(0.5_0.04_340)]">
-            © 2026 StyleLoop Vietnam — The Editorial Curator
-          </p>
         </div>
       </div>
     </footer>
