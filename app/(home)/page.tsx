@@ -484,7 +484,7 @@ export default function HomePage() {
             <div className="pt-4">
               <Button
                 variant="outline"
-                className="group/btn h-auto rounded-full border border-[oklch(0.78_0.04_70)] bg-transparent px-7 py-3 text-[12px] font-semibold tracking-[0.22em] text-[oklch(0.97_0.012_78)] uppercase transition-all duration-300 hover:border-[oklch(0.6_0.062_60)] hover:bg-[oklch(0.6_0.062_60)]"
+                className="group/btn h-auto w-full rounded-full border border-[oklch(0.78_0.04_70)] bg-transparent px-7 py-3 text-[12px] font-semibold tracking-[0.22em] text-[oklch(0.97_0.012_78)] uppercase transition-all duration-300 hover:border-[oklch(0.6_0.062_60)] hover:bg-[oklch(0.6_0.062_60)] lg:w-auto"
               >
                 <span className="flex items-center gap-3">
                   Tìm hiểu thêm
@@ -497,37 +497,40 @@ export default function HomePage() {
       </section>
 
       {/* ─────────── HOW IT WORKS ─────────── */}
-      <section className="relative mx-auto max-w-7xl px-8 py-28">
+      <section className="bg-cream-warm relative">
         <div
           aria-hidden
-          className="bg-halftone-tan pointer-events-none absolute inset-x-0 top-10 -z-10 mx-auto h-[420px] max-w-5xl opacity-50"
+          className="bg-halftone-tan pointer-events-none absolute inset-x-0 top-10 mx-auto h-[420px] max-w-5xl opacity-30"
         />
-
-        <div className="mb-20 flex flex-col items-center gap-5 text-center">
-          <div className="flex items-center gap-3">
-            <span className="h-px w-10 bg-[oklch(0.6_0.062_60)]" />
-            <span className="text-[11px] font-semibold tracking-[0.32em] text-[oklch(0.5_0.024_60)] uppercase">
-              ✦ Quy trình ✦
-            </span>
-            <span className="h-px w-10 bg-[oklch(0.6_0.062_60)]" />
+        <div className="relative mx-auto max-w-7xl px-8 py-28">
+          <div className="mb-20 flex flex-col items-center gap-5 text-center">
+            <div className="flex items-center gap-3">
+              <span className="h-px w-10 bg-[oklch(0.6_0.062_60)]" />
+              <span className="text-[11px] font-semibold tracking-[0.32em] text-[oklch(0.5_0.024_60)] uppercase">
+                ✦ Quy trình ✦
+              </span>
+              <span className="h-px w-10 bg-[oklch(0.6_0.062_60)]" />
+            </div>
+            <h2 className="font-display text-4xl font-medium tracking-[-0.01em] text-[oklch(0.18_0.014_55)] lg:text-[52px]">
+              Cách StyleLoop{" "}
+              <span className="text-[oklch(0.78_0.04_70)] italic">
+                hoạt động
+              </span>
+            </h2>
+            <p className="max-w-md text-[14px] leading-relaxed text-[oklch(0.5_0.024_60)]">
+              Trải nghiệm thời trang tuần hoàn chỉ trong vài bước đơn giản.
+            </p>
           </div>
-          <h2 className="font-display text-4xl font-medium tracking-[-0.01em] text-[oklch(0.97_0.012_78)] lg:text-[52px]">
-            Cách StyleLoop{" "}
-            <span className="text-[oklch(0.78_0.04_70)] italic">hoạt động</span>
-          </h2>
-          <p className="max-w-md text-[14px] leading-relaxed text-[oklch(0.5_0.024_60)]">
-            Trải nghiệm thời trang tuần hoàn chỉ trong vài bước đơn giản.
-          </p>
-        </div>
 
-        <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-4">
-          <div
-            aria-hidden
-            className="absolute top-12 right-[12%] left-[12%] hidden h-px bg-[radial-gradient(circle,oklch(0.78_0.04_70)_1px,transparent_1.5px)] [background-size:12px_2px] lg:block"
-          />
-          {STEPS.map((step) => (
-            <StepCard key={step.index} {...step} />
-          ))}
+          <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-4">
+            <div
+              aria-hidden
+              className="absolute top-12 right-[12%] left-[12%] hidden h-px bg-[radial-gradient(circle,oklch(0.78_0.04_70)_1px,transparent_1.5px)] [background-size:12px_2px] lg:block"
+            />
+            {STEPS.map((step) => (
+              <StepCard key={step.index} {...step} />
+            ))}
+          </div>
         </div>
       </section>
 

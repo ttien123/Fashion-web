@@ -41,7 +41,7 @@ export function SiteFooter() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-24 right-[10%] size-80 rounded-full bg-[oklch(0.6_0.062_60/0.12)] blur-3xl"
+        className="pointer-events-none absolute right-[10%] -bottom-24 size-80 rounded-full bg-[oklch(0.6_0.062_60/0.12)] blur-3xl"
       />
 
       {/* Newsletter ribbon */}
@@ -53,7 +53,7 @@ export function SiteFooter() {
             </p>
             <h3 className="font-display text-2xl font-medium tracking-tight text-[oklch(0.97_0.012_78)] lg:text-[28px]">
               Đăng ký nhận{" "}
-              <span className="italic text-[oklch(0.86_0.034_70)]">
+              <span className="text-[oklch(0.86_0.034_70)] italic">
                 ưu đãi sớm nhất
               </span>{" "}
               từ StyleLoop.
@@ -65,7 +65,7 @@ export function SiteFooter() {
               <Input
                 type="email"
                 placeholder="Email của bạn..."
-                className="border-0 bg-transparent p-0 text-[13px] text-[oklch(0.18_0.014_55)] placeholder:text-[oklch(0.55_0.024_60)] shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                className="border-0 bg-transparent p-0 text-[13px] text-[oklch(0.18_0.014_55)] shadow-none placeholder:text-[oklch(0.55_0.024_60)] focus-visible:ring-0 focus-visible:ring-offset-0"
               />
             </div>
             <Button
@@ -86,17 +86,16 @@ export function SiteFooter() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-8 py-14 font-display text-sm md:grid-cols-4 lg:px-12">
         <div className="space-y-6">
           <Link href="#" className="flex items-baseline gap-1.5">
-            <span className="font-display text-2xl font-black uppercase tracking-[0.05em] text-[oklch(0.97_0.012_78)]">
+            <span className="font-display text-2xl font-black tracking-[0.05em] text-[oklch(0.97_0.012_78)] uppercase">
               Style
             </span>
-            <span className="font-display text-2xl font-medium italic tracking-tight text-[oklch(0.78_0.04_70)]">
+            <span className="font-display text-2xl font-medium tracking-tight text-[oklch(0.78_0.04_70)] italic">
               Loop
             </span>
           </Link>
           <p className="max-w-xs leading-relaxed text-[oklch(0.78_0.018_70)]">
-            Editorial wardrobe rental — nơi bạn thuê những thiết kế đáng nhớ
-            cho mọi khoảnh khắc, không cần sở hữu. Chuẩn mẫu mã. An tâm chất
-            lượng.
+            Editorial wardrobe rental — nơi bạn thuê những thiết kế đáng nhớ cho
+            mọi khoảnh khắc, không cần sở hữu. Chuẩn mẫu mã. An tâm chất lượng.
           </p>
           <div className="flex gap-3">
             {[Globe, Users, Camera].map((Icon, i) => (
@@ -138,11 +137,11 @@ export function SiteFooter() {
           <p className="text-[13px] leading-relaxed text-[oklch(0.78_0.018_70)]">
             hello@styleloop.vn
             <br />
-            Quận 1, TP. Hồ Chí Minh
+            Cầu Giấy, Hà Nội
             <br />
             Mở cửa: 9:00 — 21:00
           </p>
-          <p className="mt-2 text-[11px] italic tracking-wide text-[oklch(0.7_0.024_60)]">
+          <p className="mt-2 text-[11px] tracking-wide text-[oklch(0.7_0.024_60)] italic">
             “Mặc đẹp mỗi ngày, đổi style liên tục.”
           </p>
         </div>
